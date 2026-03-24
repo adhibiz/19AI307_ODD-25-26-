@@ -1,32 +1,27 @@
-# Ex.No:2(C) ACCESS SPECIFIERS
+# Ex.No:2(D) VARIABLE SCOPE AND CONSTRUCTOR
 
 ## QUESTION:
-Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.
+Create a Java class Book with instance variables title and author.
 
 ## AIM:
-To write a Java program that demonstrates the use of access specifiers, specifically using private for data hiding and public methods to access and modify values.
+To write a Java program to demonstrate variable scope and the use of a constructor to initialize instance variables.
 
 ## ALGORITHM :
 1.	Start the program.
 2.	Import the necessary package 'java.util'
-3.	Create a class BankAccount with private variables accountNumber and balance.
-4. Provide public getter and setter methods for both variables.
-5. Inside the main method, create an object of BankAccount.
-6. Use setter methods to assign values to accountNumber and balance.
-7. Display the values using getter methods.
-8. Stop the program.
-
-
-
+3.	Create a class named Book with instance variables title and author.
+4. Create a parameterized constructor to initialize these variables.
+5. In the main() method, create an object of the Book class and pass values through the constructor.
+6. Display the values.
+7. End the program.
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Access Specifiers using Java
+Program to implement a Variable scope and Constructor using Java
 Developed by: MADHUMITHA R R
 RegisterNumber:212224240083
-
 */
 ```
 
@@ -34,40 +29,34 @@ RegisterNumber:212224240083
 ```
 import java.util.Scanner;
 
-public class Main 
+class Book 
 {
-    static class BankAccount 
+    String title;
+    String author;
+    Book(String t, String a)
     {
-        private String accountNumber;
-        private double balance;
-        public String getAccountNumber()
-        {
-            return accountNumber;
-        }
-        public void setAccountNumber(String accountNumber) 
-        {
-            this.accountNumber = accountNumber;
-        }
-        public double getBalance() 
-        {
-            return balance;
-        }
-        public void setBalance(double balance)
-        {
-            this.balance = balance;
-        }
+        title = t;
+        author = a;
     }
 
-    public static void main(String[] args) 
+    void display() {
+        System.out.println("Book Title: " + title);
+        System.out.println("Author: " + author);
+    }
+}
+
+class prog {
+    public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        BankAccount account = new BankAccount();
-        String accNo = sc.nextLine();
-        double bal = sc.nextDouble();
-        account.setAccountNumber(accNo);
-        account.setBalance(bal);
-        System.out.println("Account Number: "+account.getAccountNumber());
-        System.out.println("Balance: "+account.getBalance());
+        
+        String title = sc.nextLine();   
+        String author = sc.nextLine(); 
+
+        Book b = new Book(title, author);
+        b.display();
+
+        sc.close();
     }
 }
 ```
@@ -76,13 +65,11 @@ public class Main
 
 
 
-
-
 ## OUTPUT:
 
-![java23](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/025b00cfa6e057b13e81ffd84dd75ef76213a9db/19AI307_JAVA(25-26)/Module-02/DAY-3/java23.png)
+![java24](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/deb86e008500c33f568047cc6e92298e774f4c47/19AI307_JAVA(25-26)/Module-02/DAY-4/java24.png)
 
 ## RESULT:
-Thus, a Java program to implement Access Specifiers using private variables with public getter and setter methods was executed successfully.
 
+Thus, the Java program to demonstrate variable scope and constructor was executed successfully.
 
