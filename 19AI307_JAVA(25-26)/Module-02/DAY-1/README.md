@@ -27,10 +27,9 @@ To write a Java program that demonstrates the concept of Class and Object using 
 ## PROGRAM:
  ```
 /*
-Program to implement a Class and Objects using Java
-Developed by: MADHUMITHA R R
-RegisterNumber:212224240083
-
+Program to implement a Variable scope and Constructor using Java
+Developed by: AATHI SAKTHI S
+RegisterNumber:212223223001
 */
 ```
 
